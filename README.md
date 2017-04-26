@@ -7,12 +7,12 @@
 * Android Studio
 
     ```groovy
-    compile 'com.huxley:wiitools:1.0.0'
+    compile 'com.huxley:wiitools:2.0.0'
     ```
 
 * Eclipse
 	
-	下载最新 aar:[wiitools-1.0.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/1.0.0/wiitools-1.0.0.aar)
+	下载最新 aar:[wiitools-2.0.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.0.0/wiitools-2.0.0.aar)
 	
 ## 配置
 
