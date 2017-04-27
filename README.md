@@ -1,6 +1,6 @@
-# WiiDialog
+# WiiTools
 
-一个用 Activity 打造的 Dialog
+一个 Android 的工具库
 
 ## 用法
 
