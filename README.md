@@ -7,12 +7,12 @@
 * Android Studio
 
     ```groovy
-    compile 'com.huxley:wiitools:2.0.0'
+    compile 'com.huxley:wiitools:2.0.1'
     ```
 
 * Eclipse
 	
-	下载最新 aar:[wiitools-2.0.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.0.0/wiitools-2.0.0.aar)
+	下载最新 aar:[wiitools-2.0.1.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.0.1/wiitools-2.0.1.aar)
 	
 ## 配置
 
@@ -88,3 +88,10 @@ WiiTools.init(this);
     ```java
     HandlerBus.getInstance().post(MainActivity.class, 1, "HandlerBus 成功了");
     ```
+    
+#### WiiLog 的使用
+
+```java
+WiiTools.init(this)
+    .initLog(true, "WiiLog");
+```

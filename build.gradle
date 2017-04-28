@@ -30,4 +30,7 @@ ext{
     versionName = '1.0'
 
     supportLibVersion = '25.0.0'
+
+    gson = '2.8.0'
+    okhttp = '3.7.0'
 }

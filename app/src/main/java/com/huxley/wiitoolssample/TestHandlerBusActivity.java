@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.huxley.wiitools.wiiHandler.HandlerBus;
+import com.huxley.wiitools.handlerBus.HandlerBus;
 
 /**
  * Created by huxley on 2017/4/26.

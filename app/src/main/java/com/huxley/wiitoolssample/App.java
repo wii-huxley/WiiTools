@@ -15,6 +15,7 @@ public class App extends Application {
         super.onCreate();
 
         WiiTools.init(this)
+                .initLog(true, "wii_huxley")
                 .initSinaEmailCrash("emailName", "emailPassword");
     }
 }

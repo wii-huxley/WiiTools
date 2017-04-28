@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.huxley.wiitools.wiiHandler.HandlerBus;
-import com.huxley.wiitools.wiiHandler.IHandler;
+import com.huxley.wiitools.handlerBus.HandlerBus;
+import com.huxley.wiitools.handlerBus.IHandler;
 
 import java.text.MessageFormat;
 

@@ -1,4 +1,4 @@
-package com.huxley.wiitools.wiiHandler;
+package com.huxley.wiitools.handlerBus;
 
 import android.os.Message;
 

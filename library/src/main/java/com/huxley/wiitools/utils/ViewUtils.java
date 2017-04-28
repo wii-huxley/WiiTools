@@ -2,6 +2,7 @@ package com.huxley.wiitools.utils;
 
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.StringRes;
 import android.support.v4.view.ViewCompat;
 import android.view.View;
 import android.widget.TextView;
@@ -45,6 +46,13 @@ public class ViewUtils {
             view.setVisibility(visibility);
         }
     }
+    @SuppressWarnings("unchecked")
+    public static  <T extends View> T getView(View parent, int viewId) {
+        if (viewId > INITIAL) {
+            return (T) parent.findViewById(viewId);
+        }
+        return null;
+    }
     //------------------- View ------------------- end
 
     //------------------- TextView ------------------- start
@@ -54,8 +62,21 @@ public class ViewUtils {
         }
     }
     public static void setText(TextView textView, CharSequence content) {
-        if (textView != null && content != null) {
-            textView.setText(content);
+        if (textView != null) {
+            if (content != null) {
+                textView.setText(content);
+            } else {
+                textView.setText("");
+            }
+        }
+    }
+    public static void setText(TextView textView, @StringRes int strId) {
+        if (textView != null) {
+            if (strId > INITIAL) {
+                textView.setText(strId);
+            } else {
+                textView.setText("");
+            }
         }
     }
     public static void setTypeface(TextView textView, Typeface typeface) {

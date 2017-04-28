@@ -2,6 +2,8 @@ package com.huxley.wiitools;
 
 import android.content.Context;
 
+import com.huxley.wiitools.utils.StringUtils;
+import com.huxley.wiitools.utils.log.WiiLog;
 import com.huxley.wiitools.wiiCrash.WiiCrash;
 import com.huxley.wiitools.wiiCrash.mailreporter.CrashEmailReporter;
 
@@ -42,4 +44,11 @@ public class WiiTools {
         return this;
     }
 
+    public WiiTools initLog(boolean isLog, String tag) {
+        WiiLog.LOG = isLog;
+        if (!StringUtils.isEmpty(tag)) {
+            WiiLog.TAG_ROOT = tag;
+        }
+        return this;
+    }
 }
