@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <View
+        style="@style/divider_horizontal"
+        android:layout_height="8dp"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.edit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:title="edit"
+        app:text_hint="text_hint"
+        app:content="test"
+        />
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.spinner"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:spinner_data="@array/ary"
+        app:title="spinner"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.select"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:content="test"
+        app:title="select"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.text"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:content="test"
+        app:title="text"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.aswitch"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:title="switch"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        android:id="@+id/input_mpvcode"
+        style="@style/input_box.mpvcode"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:title="mpvcode"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.select.date"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:title="date"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <com.huxley.wiitools.view.WiiInput
+        style="@style/input_box.select.time"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        app:title="time"/>
+</LinearLayout>

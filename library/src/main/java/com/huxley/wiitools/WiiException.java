@@ -6,5 +6,4 @@ package com.huxley.wiitools;
 
 public class WiiException extends Throwable {
 
-
 }

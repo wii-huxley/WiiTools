@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">WiiTools</string>
     <string name="toast_message">Toast message</string>
+    <array name="ary">
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+    </array>
 </resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="input_box">
+        <item name="title_color">@color/color_grey_700</item>
+        <item name="content_color">@color/color_grey_800</item>
+        <item name="text_size">@dimen/text_size_m</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="input_box.edit" parent="input_box">
+        <item name="input_type">edit</item>
+    </style>
+
+    <style name="input_box.spinner" parent="input_box">
+        <item name="input_type">spinner</item>
+    </style>
+
+    <style name="input_box.text" parent="input_box">
+        <item name="input_type">text</item>
+    </style>
+
+    <style name="input_box.aswitch" parent="input_box">
+        <item name="input_type">aswitch</item>
+    </style>
+
+    <style name="input_box.mpvcode" parent="input_box">
+        <item name="input_type">mpvcode</item>
+    </style>
+
+    <style name="input_box.select" parent="input_box">
+        <item name="input_type">select</item>
+    </style>
+
+    <style name="input_box.select.time" parent="input_box">
+        <item name="input_type">select_time</item>
+    </style>
+
+    <style name="input_box.select.date" parent="input_box">
+        <item name="input_type">select_date</item>
+    </style>
+
+    <style name="divider_horizontal">
+        <item name="android:background">@color/color_eb</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1sp</item>
+    </style>
+    <style name="divider_vertical">
+        <item name="android:background">@color/color_eb</item>
+        <item name="android:layout_width">1sp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>

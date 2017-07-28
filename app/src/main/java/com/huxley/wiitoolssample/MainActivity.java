@@ -36,11 +36,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void TestToast(View view) {
+    public void testToast(View view) {
         startActivity(new Intent(this, TestToastActivity.class));
     }
 
-    public void TestHandlerBus(final View view) {
+    public void testHandlerBus(final View view) {
         startActivity(new Intent(this, TestHandlerBusActivity.class));
+    }
+
+    public void testInput(View view) {
+        startActivity(new Intent(this, TestInputActivity.class));
+    }
+
+    public void testDialog(View view) {
+        startActivity(new Intent(this, TestDialogActivity.class));
     }
 }

@@ -1,9 +1,11 @@
 package com.huxley.wiitools.utils;
 
+import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.StringRes;
 import android.support.v4.view.ViewCompat;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,11 +23,13 @@ public class ViewUtils {
             ViewCompat.setBackground(view, drawable);
         }
     }
+
     public static void setBackground(View view, int drawableResId) {
         if (view != null && drawableResId > INITIAL) {
             ViewCompat.setBackground(view, ResUtils.getDrawable(drawableResId));
         }
     }
+
     public static void setBackgroundOrGone(View view, Drawable drawable) {
         if (drawable == null) {
             setVisibility(view, View.GONE);
@@ -33,6 +37,7 @@ public class ViewUtils {
             setBackground(view, drawable);
         }
     }
+
     public static void setBackgroundOrGone(View view, int drawableResId) {
         if (drawableResId > INITIAL) {
             setBackground(view, drawableResId);
@@ -41,17 +46,41 @@ public class ViewUtils {
             setVisibility(view, View.GONE);
         }
     }
+
     public static void setVisibility(View view, int visibility) {
-        if (view !=null) {
+        if (view != null) {
             view.setVisibility(visibility);
         }
     }
+
     @SuppressWarnings("unchecked")
-    public static  <T extends View> T getView(View parent, int viewId) {
+    public static <T extends View> T getView(View parent, int viewId) {
         if (viewId > INITIAL) {
             return (T) parent.findViewById(viewId);
         }
         return null;
+    }
+
+    public static View getLayout(Context context, int resourceId) {
+        return getLayout(context, resourceId, null);
+    }
+
+    public static View getLayout(Context context, int resourceId, View view) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        if (view != null) {
+            return view;
+        }
+        if (resourceId != INITIAL) {
+            view = inflater.inflate(resourceId, null);
+        }
+        return view;
+    }
+
+    public static void setOnClickListener(View view, View.OnClickListener listener) {
+        if (view == null || listener == null) {
+            return;
+        }
+        view.setOnClickListener(listener);
     }
     //------------------- View ------------------- end
 
@@ -61,6 +90,7 @@ public class ViewUtils {
             textView.setTextColor(ResUtils.getColor(colorResId));
         }
     }
+
     public static void setText(TextView textView, CharSequence content) {
         if (textView != null) {
             if (content != null) {
@@ -70,6 +100,7 @@ public class ViewUtils {
             }
         }
     }
+
     public static void setText(TextView textView, @StringRes int strId) {
         if (textView != null) {
             if (strId > INITIAL) {
@@ -79,6 +110,7 @@ public class ViewUtils {
             }
         }
     }
+
     public static void setTypeface(TextView textView, Typeface typeface) {
         if (textView != null && typeface != null) {
             textView.setTypeface(typeface);

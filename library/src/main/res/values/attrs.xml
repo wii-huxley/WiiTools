@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="input_box">
+        <attr name="title" format="string"/>
+        <attr name="content" format="string"/>
+        <attr name="text_hint" format="string"/>
+
+        <attr name="title_color" format="color"/>
+        <attr name="content_color" format="color"/>
+
+        <attr name="text_separator" format="string"/>
+        <attr name="text_size" format="dimension"/>
+
+        <attr name="spinner_data" format="reference"/>
+        <attr name="edit_type">
+            <enum name="user_name" value="0"/>
+            <enum name="password" value="1"/>
+            <enum name="phone_num" value="2"/>
+            <enum name="num" value="3"/>
+        </attr>
+        <attr name="input_type">
+            <enum name="edit" value="0"/>
+            <enum name="text" value="1"/>
+            <enum name="select" value="2"/>
+            <enum name="spinner" value="3"/>
+            <enum name="aswitch" value="4"/>
+            <enum name="mpvcode" value="5"/>
+            <enum name="select_time" value="6"/>
+            <enum name="select_date" value="7"/>
+        </attr>
+    </declare-styleable>
+</resources>

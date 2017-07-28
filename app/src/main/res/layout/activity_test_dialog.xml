@@ -14,11 +14,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
-                android:id="@+id/btn_test_toast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="testToast"
-                android:text="@string/test_toast"/>
+                android:onClick="getSimpleCenter"
+                android:text="简单提示框"/>
             <Button
                 android:id="@+id/btn_test_handler_bus"
                 android:layout_width="match_parent"
@@ -41,3 +40,4 @@
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
+

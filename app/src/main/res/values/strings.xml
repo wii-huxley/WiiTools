@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WiiTools</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="test_toast">toast测试</string>
+    <string name="test_handler_bus">handlerBus测试</string>
+    <string name="test_input">input测试</string>
+    <string name="test_dialog">dialog测试</string>
 </resources>

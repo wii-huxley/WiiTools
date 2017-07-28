@@ -38,4 +38,12 @@ public class ResUtils {
     public static String getString(int stringResId) {
         return WiiTools.instance.mContext.getString(stringResId);
     }
+
+
+    /**
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     */
+    public static int dp2px(float dpValue) {
+        return (int) (dpValue * WiiTools.instance.mContext.getResources().getDisplayMetrics().density + 0.5f);
+    }
 }
