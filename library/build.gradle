@@ -36,7 +36,7 @@ publish {
     userOrg = 'huangweiyi'      //bintray注册的用户名
     groupId = 'com.huxley'         //compile引用时的第1部分groupId
     artifactId = 'wiitools'     //compile引用时的第2部分项目名
-    publishVersion = '2.0.2'    //compile引用时的第3部分版本号
+    publishVersion = '2.0.3'    //compile引用时的第3部分版本号
     desc = 'This is a android tools'
     website = 'https://github.com/wii-huxley/WiiTools'
 }
