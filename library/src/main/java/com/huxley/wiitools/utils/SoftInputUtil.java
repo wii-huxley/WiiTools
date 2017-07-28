@@ -1,4 +1,4 @@
-package com.huxley.wii.yl.common.utils;
+package com.huxley.wiitools.utils;
 
 import android.app.Activity;
 import android.os.IBinder;

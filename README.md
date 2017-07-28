@@ -7,7 +7,7 @@
 * Android Studio
 
     ```groovy
-    compile 'com.huxley:wiitools:2.0.2'
+    compile 'com.huxley:wiitools:2.0.2
     ```
 
 * Eclipse

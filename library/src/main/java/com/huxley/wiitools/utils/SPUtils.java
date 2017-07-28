@@ -1,4 +1,4 @@
-package com.huxley.wii.yl.common.utils;
+package com.huxley.wiitools.utils;
 
 import android.content.SharedPreferences;
 import android.support.v4.content.SharedPreferencesCompat;
