@@ -121,7 +121,7 @@ public class WiiInput extends LinearLayout {
         LayoutParams params = new LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER_VERTICAL;
         params.weight = 1;
-        params.leftMargin = ResUtils.dp2px(16);
+        params.leftMargin = ResUtils.dpToPx(16);
         mTitleView.setLayoutParams(params);
         if (getChildCount() >= 1) removeViewAt(0);
         addView(mTitleView, 0);
@@ -143,13 +143,13 @@ public class WiiInput extends LinearLayout {
                 break;
             case TYPE_SPINNER:
                 mContentView = getSpinnerView();
-                params.rightMargin = ResUtils.dp2px(16);
+                params.rightMargin = ResUtils.dpToPx(16);
                 break;
             case TYPE_SWITCH:
                 mContentView = getSwitchView();
                 params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 params.gravity = Gravity.CENTER_VERTICAL;
-                params.rightMargin = ResUtils.dp2px(16);
+                params.rightMargin = ResUtils.dpToPx(16);
                 break;
             case TYPE_MPVCODE:
                 mContentView = getMPVCodeView();
@@ -236,7 +236,7 @@ public class WiiInput extends LinearLayout {
         ((TextView) contentViews[0]).setGravity(Gravity.CENTER_VERTICAL);
         ((TextView) contentViews[0]).setTextColor(mContentColor);
         ((TextView) contentViews[0]).setTextSize(TypedValue.COMPLEX_UNIT_PX, mTextSize);
-        contentViews[0].setPadding(ResUtils.dp2px(5), 0, ResUtils.dp2px(16), 0);
+        contentViews[0].setPadding(ResUtils.dpToPx(5), 0, ResUtils.dpToPx(16), 0);
         Drawable drawable = ResUtils.getDrawable(R.drawable.ic_more);
         drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         ((TextView) contentViews[0]).setCompoundDrawables(null, null, drawable, null);
@@ -302,7 +302,7 @@ public class WiiInput extends LinearLayout {
         contentViews[0] = new TextView(getContext());
         ((TextView) contentViews[0]).setGravity(Gravity.CENTER_VERTICAL);
         ((TextView) contentViews[0]).setTextColor(mContentColor);
-        contentViews[0].setPadding(ResUtils.dp2px(5), 0, ResUtils.dp2px(16), 0);
+        contentViews[0].setPadding(ResUtils.dpToPx(5), 0, ResUtils.dpToPx(16), 0);
         ((TextView) contentViews[0]).setTextSize(TypedValue.COMPLEX_UNIT_PX, mTextSize);
         ((TextView) contentViews[0]).setHint(mTextHint);
         ((TextView) contentViews[0]).setText(mContent);
