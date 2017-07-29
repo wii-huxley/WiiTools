@@ -38,4 +38,6 @@ ext{
     lombok = '1.12.6'
     gson = '2.8.0'
     okhttp = '3.7.0'
+    rxjava = '2.0.1'
+    rxandroid = '2.0.1'
 }

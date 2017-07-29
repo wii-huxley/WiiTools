@@ -7,12 +7,12 @@
 * Android Studio
 
     ```groovy
-    compile 'com.huxley:wiitools:2.0.3
+    compile 'com.huxley:wiitools:2.2.0
     ```
 
 * Eclipse
 	
-	下载最新 aar:[wiitools-2.0.3.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.0.3/wiitools-2.0.3.aar)
+	下载最新 aar:[wiitools-2.2.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.2.0/wiitools-2.2.0.aar)
 	
 ## 配置
 
@@ -96,3 +96,12 @@ WiiTools.init(this)
     .initLog(true, "WiiLog");
 WiiLog.i("");
 ```
+
+#### ReflectUtil的使用
+
+* ReflectUtil.on 包裹一个类或者对象，表示在这个类或对象上进行反射，类的值可以使Class,也可以是完整的类名（包含包名信息）
+* ReflectUtil.create 用来调用之前的类的构造方法，有两种重载，一种有参数，一种无参数
+* ReflectUtil.call 方法调用，传入方法名和参数，如有返回值还需要调用get
+* ReflectUtil.get 获取（field和method返回）值相关，会进行类型转换，常与call和field组合使用
+* ReflectUtil.field 获取属性值相关，需要调用get获取该值
+* ReflectUtil.set 设置属性相关。

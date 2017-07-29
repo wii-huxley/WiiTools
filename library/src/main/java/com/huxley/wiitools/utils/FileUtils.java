@@ -27,7 +27,7 @@ public class FileUtils {
         if (!checkOrCreateFile(file)) {
             return;
         }
-        String time = DateUtils.getCurrentDateString();
+        String time = DateUtils.getCurrentTime("MM-dd HH:mm:ss.SSS");
         synchronized (file) {
             FileWriter fileWriter = null;
             BufferedWriter bufdWriter = null;
