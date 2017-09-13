@@ -7,12 +7,12 @@
 * Android Studio
 
     ```groovy
-    compile 'com.huxley:wiitools:2.2.0
+    compile 'com.huxley:wiitools:2.8.0
     ```
 
 * Eclipse
 	
-	下载最新 aar:[wiitools-2.2.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.2.0/wiitools-2.2.0.aar)
+	下载最新 aar:[wiitools-2.8.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiitools/2.8.0/wiitools-2.8.0.aar)
 	
 ## 配置
 
@@ -105,3 +105,16 @@ WiiLog.i("");
 * ReflectUtil.get 获取（field和method返回）值相关，会进行类型转换，常与call和field组合使用
 * ReflectUtil.field 获取属性值相关，需要调用get获取该值
 * ReflectUtil.set 设置属性相关。
+
+#### DialogFragmentHelper 的使用
+
+* showTimeDialog：选择时间的弹出窗
+* showPasswordInsertDialog：输入密码的弹出窗
+* showListDialog：显示列表的弹出窗
+* showIntervalInsertDialog：两个输入框的弹出窗
+* showInsertDialog：一个输入框的弹出窗
+* showDateDialog：选择日期的弹出窗
+* showConfirmDialog：确认和取消的弹出窗
+* showTips：简单提示弹出窗
+* showProgress：加载中的弹出窗
+* showCustomDialog：自定义提示弹出窗

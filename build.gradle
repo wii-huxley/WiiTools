@@ -17,6 +17,10 @@ allprojects {
         maven {
             url 'https://dl.bintray.com/huangweiyi/maven'
         }
+        //Bmob的maven仓库地址--必填
+        maven {
+            url "https://raw.github.com/bmob/bmob-android-sdk/master"
+        }
     }
 }
 
@@ -28,16 +32,17 @@ ext{
     minSdkVersion = 21
     targetSdkVersion = 25
     compileSdkVersion = 25
-    buildToolsVersion = '25.0.0'
+    buildToolsVersion = '25.0.1'
 
-    versionCode = 1
-    versionName = '1.0'
+    versionCode = 3
+    versionName = '1.2'
 
-    supportLibVersion = '25.0.0'
+    supportLibVersion = '25.1.0'
 
     lombok = '1.12.6'
-    gson = '2.8.0'
-    okhttp = '3.7.0'
-    rxjava = '2.0.1'
-    rxandroid = '2.0.1'
+    retrofit = '2.2.0'
+    converterGson = '2.2.0'
+    adapterRxjava = '2.2.0'
+    multitype = '3.1.0'
+    bmob = '3.5.5'
 }

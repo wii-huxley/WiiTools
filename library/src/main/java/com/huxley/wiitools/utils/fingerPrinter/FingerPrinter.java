@@ -1,40 +1,15 @@
 package com.huxley.wiitools.utils.fingerPrinter;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.app.KeyguardManager;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.hardware.fingerprint.FingerprintManager;
-import android.os.Build;
-import android.os.CancellationSignal;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-
-import org.reactivestreams.Subscription;
-
-import java.util.HashMap;
-
-import io.reactivex.subjects.PublishSubject;
-
-import static com.huxley.wiitools.utils.fingerPrinter.CodeException.FINGERPRINTERS_FAILED_ERROR;
-import static com.huxley.wiitools.utils.fingerPrinter.CodeException.HARDWARE_MISSIING_ERROR;
-import static com.huxley.wiitools.utils.fingerPrinter.CodeException.KEYGUARDSECURE_MISSIING_ERROR;
-import static com.huxley.wiitools.utils.fingerPrinter.CodeException.NO_FINGERPRINTERS_ENROOLED_ERROR;
-import static com.huxley.wiitools.utils.fingerPrinter.CodeException.PERMISSION_DENIED_ERROE;
-import static com.huxley.wiitools.utils.fingerPrinter.CodeException.SYSTEM_API_ERROR;
-
 
 /**
  * 指纹识别
  * Created by Administrator on 2016/12/31.
  */
 public class FingerPrinter {
-
-//    private FingerprintManager                     manager;
-//    private KeyguardManager                        mKeyManager;
-//    private Context                                context;
+//
+//    private FingerprintManager            manager;
+//    private KeyguardManager               mKeyManager;
+//    private Context                       context;
 //    private HashMap<String, Subscription> mSubscriptionMap;
 //    PublishSubject<Boolean> publishSubject;
 //    @SuppressLint("NewApi")

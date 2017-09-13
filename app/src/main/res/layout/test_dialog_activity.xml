@@ -1,94 +1,64 @@
-<android.support.design.widget.CoordinatorLayout android:id="@+id/coordinatorlayout"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    >
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:baselineAligned="false"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:weightSum="1"
-        tools:context=".MainActivity"
-        >
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/simple_dialog_btn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="simpleDialog"
-            android:text="简单提示框"
-            />
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showTimeDialog"
+                android:text="选择时间的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showPasswordInsertDialog"
+                android:text="输入密码的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showListDialog"
+                android:text="显示列表的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showIntervalInsertDialog"
+                android:text="两个输入框的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showInsertDialog"
+                android:text="一个输入框的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showDateDialog"
+                android:text="选择日期的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showConfirmDialog"
+                android:text="确认和取消的弹出窗"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showTips"
+                android:text="showTips"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showProgress"
+                android:text="showProgress"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
 
-        <Button
-            android:id="@+id/single_dialog_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="singleChoiceDialog"
-            android:text="单选对话框"
-            />
-
-        <Button
-            android:id="@+id/multi_dialog_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="multiChoiceDialog"
-            android:text="多选对话框"
-            />
-
-        <Button
-            android:id="@+id/custom_dialog_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="customDialog"
-            android:text="自定义对话框"
-            />
-
-        <Button
-            android:id="@+id/custom_dialog02_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="customDialog02"
-            android:text="自定义对话框02"
-            />
-
-        <Button
-            android:id="@+id/bottom_dialog_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="customBottomDialog"
-            android:text="底部对话框"
-            />
-
-
-        <Button
-            android:id="@+id/bottom_dialog02_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="customBottomDialog02"
-            android:text="底部对话框02"
-            />
-        
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
-
-        <Button
-            android:id="@+id/jump_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="跳转到自定义样式的dialog"
-            />
-
-    </LinearLayout>
-
-    <include layout="@layout/content_bottom_sheet" />
-
-</android.support.design.widget.CoordinatorLayout>

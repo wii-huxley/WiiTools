@@ -1,4 +1,4 @@
-package com.huxley.wiitools.okhttp;
+package com.huxley.wiitools.retrofitUtils;
 
 
 import com.huxley.wiitools.utils.DataUtils;
@@ -20,7 +20,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
-import okhttp3.internal.http.HttpHeaders;
+import okhttp3.internal.http.HttpEngine;
 import okio.Buffer;
 import okio.BufferedSource;
 
@@ -90,7 +90,7 @@ public class OkHttpLoggingInterceptor implements Interceptor {
         String bodySize = contentLength != -1 ? contentLength + "-byte" : "unknown-length";
         WiiLog.d(MessageFormat.format("<-- {0} {1} ({2}ms, {3} body)", response.code(), response.message(), tookMs, bodySize));
         WiiLog.i(response.headers().toString());
-        if (!HttpHeaders.hasBody(response)) {
+        if (!HttpEngine.hasBody(response)) {
             WiiLog.d("<-- END HTTP");
         } else if (bodyEncoded(response.headers())) {
             WiiLog.d("<-- END HTTP (encoded body omitted)");

@@ -28,7 +28,7 @@ public class SPUtils {
         } else if (object instanceof Long) {
             editor.putLong(key, (Long) object);
         } else {
-            editor.putString(key, object.toString());
+            editor.putString(key, GsonUtils.toJson(object));
         }
         editorCompat.apply(editor);
     }
@@ -49,7 +49,7 @@ public class SPUtils {
             } else if (object instanceof Long) {
                 editor.putLong(key, (Long) object);
             } else {
-                editor.putString(key, object.toString());
+                editor.putString(key, GsonUtils.toJson(object));
             }
         }
         editorCompat.apply(editor);

@@ -138,7 +138,7 @@ public class LogMail extends Authenticator {
         props = new Properties();
 
         props.put("mail.smtp.host", host);
-        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.apiAuth", "true");
         props.put("mail.smtp.port", port);
         props.put("mail.smtp.socketFactory.port", port);
         props.put("mail.transport.protocol", "smtp");

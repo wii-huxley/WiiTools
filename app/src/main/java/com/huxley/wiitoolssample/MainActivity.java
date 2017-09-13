@@ -9,6 +9,12 @@ import android.widget.Button;
 
 import com.huxley.wiitools.handlerBus.HandlerBus;
 import com.huxley.wiitools.handlerBus.IHandler;
+import com.huxley.wiitools.companyUtils.acce.AcceSubscriber;
+import com.huxley.wiitools.companyUtils.acce.AcceTools;
+import com.huxley.wiitools.companyUtils.acce.model.AcceHttpModel;
+import com.huxley.wiitools.companyUtils.acce.model.AcceUserModel;
+import com.huxley.wiitools.utils.log.WiiLog;
+import com.huxley.wiitoolssample.testMultiType.TestMultiTypeActivity;
 
 import java.text.MessageFormat;
 
@@ -34,6 +40,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        AcceUserModel.getInstance().setAtUserId("15565502588");
+        AcceHttpModel.getInstance()
+                .setUrl(App.Url.API_AUTO)
+                .setServiceCode(App.ServiceCode.LOGIN)
+                .addBusiness("phoneNum", "15565502588")
+                .addBusiness("pwd", AcceTools.getEnPassword("654321"))
+                .post(new AcceSubscriber<String>() {
+                    @Override
+                    public void onSuccess(String userBean) {
+                        WiiLog.i("1111");
+                        WiiLog.json(userBean);
+                    }
+                    @Override
+                    public void onError(String msg) {
+                        WiiLog.i("2222");
+                        WiiLog.i(msg);
+                    }
+                });
     }
 
     public void testToast(View view) {
@@ -50,5 +75,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void testDialog(View view) {
         startActivity(new Intent(this, TestDialogActivity.class));
+    }
+
+    public void testSelectDate(View view) {
+        startActivity(new Intent(this, TestSelectDateActivity.class));
+    }
+
+    public void testSopfix(View view) {
+        startActivity(new Intent(this, TestSopfixActivity.class));
+    }
+
+    public void testMultiType(View view) {
+        startActivity(new Intent(this, TestMultiTypeActivity.class));
+    }
+
+    public void testStatusButton(View view) {
+        startActivity(new Intent(this, TestButtonActivity.class));
     }
 }

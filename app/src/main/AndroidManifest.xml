@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.huxley.wiitoolssample">
 
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 外部存储读权限，调试工具加载本地补丁需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -20,12 +27,11 @@
         <activity android:name=".TestHandlerBusActivity"/>
         <activity android:name=".TestToastActivity"/>
         <activity android:name=".TestInputActivity"/>
-        <activity android:name=".easydialog.TestDialogActivity"/>
-        <activity
-            android:name=".easydialog.CustomStyleActivity"
-            android:theme="@style/AppTheme.CustomDialogStyle"/>
-        <activity android:name=".TestDialogActivity">
-        </activity>
+        <activity android:name=".TestDialogActivity"/>
+        <activity android:name=".TestSelectDateActivity"/>
+        <activity android:name=".TestSopfixActivity"/>
+        <activity android:name=".testMultiType.TestMultiTypeActivity"/>
+        <activity android:name=".TestButtonActivity"/>
     </application>
 
 </manifest>

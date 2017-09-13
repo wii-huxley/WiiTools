@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -95,5 +96,43 @@ public class DateUtils {
 
     public static String getCurrentTime(String pattern) {
         return formatDate(new Date(), pattern);
+    }
+
+    public static String addDate(int type, String date, String pattern) {
+        GregorianCalendar gc = new GregorianCalendar();
+        gc.setTime(parseDate(date, pattern));
+        gc.add(type, 1);
+        return formatDate(gc.getTime(), pattern);
+    }
+
+    public static String addDay(String date, String pattern) {
+        return addDate(Calendar.DAY_OF_MONTH, date, pattern);
+    }
+
+    public static String addMonth(String date, String pattern) {
+        return addDate(Calendar.MONTH, date, pattern);
+    }
+
+    public static String addYear(String date, String pattern) {
+        return addDate(Calendar.YEAR, date, pattern);
+    }
+
+    public static String minusDate(int type, String date, String pattern) {
+        GregorianCalendar gc = new GregorianCalendar();
+        gc.setTime(parseDate(date, pattern));
+        gc.add(type, -1);
+        return formatDate(gc.getTime(), pattern);
+    }
+
+    public static String minusDay(String date, String pattern) {
+        return minusDate(Calendar.DAY_OF_MONTH, date, pattern);
+    }
+
+    public static String minusMonth(String date, String pattern) {
+        return minusDate(Calendar.MONTH, date, pattern);
+    }
+
+    public static String minusYear(String date, String pattern) {
+        return minusDate(Calendar.YEAR, date, pattern);
     }
 }

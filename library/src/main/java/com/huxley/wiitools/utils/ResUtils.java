@@ -1,5 +1,6 @@
 package com.huxley.wiitools.utils;
 
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -8,8 +9,10 @@ import android.graphics.drawable.NinePatchDrawable;
 import android.support.annotation.ArrayRes;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DimenRes;
+import android.support.annotation.IntegerRes;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
@@ -42,6 +45,12 @@ public class ResUtils {
         return sDisplayMetrics;
     }
 
+    public static Drawable tintDrawable(int drawableResId, int colors) {
+        final Drawable wrappedDrawable = getDrawable(drawableResId);
+        DrawableCompat.setTintList(wrappedDrawable, ColorStateList.valueOf(colors));
+        return wrappedDrawable;
+    }
+
     public static Drawable getDrawable(int drawableResId) {
         return ContextCompat.getDrawable(WiiTools.instance.mContext, drawableResId);
     }
@@ -71,6 +80,10 @@ public class ResUtils {
 
     public static int getInt(@StringRes int strResId){
         return Integer.valueOf(getString(strResId));
+    }
+
+    public static int getInteger(@IntegerRes int intResId){
+        return getResources().getInteger(intResId);
     }
 
     public static String[] getStringArray(@ArrayRes int strAryResId) {
@@ -139,5 +152,13 @@ public class ResUtils {
             result = dpToPx(40);
         }
         return result;
+    }
+
+    public static int getScreenWidth() {
+        return getDisplayMetrics().widthPixels;
+    }
+
+    public static int getScreenHeight() {
+        return getDisplayMetrics().heightPixels;
     }
 }

@@ -6,18 +6,8 @@ package com.huxley.wiitools;
 
 public class WiiException extends RuntimeException {
 
-    /**
-     * Generated UID
-     */
-    private static final long serialVersionUID = -6213149635297151442L;
-
-    public WiiException(String message) {
-        super(message);
-    }
-
-    public WiiException(String message, Throwable cause) {
-        super(message, cause);
-    }
+    private String code;
+    private String message;
 
     public WiiException() {
         super();
@@ -25,5 +15,27 @@ public class WiiException extends RuntimeException {
 
     public WiiException(Throwable cause) {
         super(cause);
+    }
+
+    public WiiException(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

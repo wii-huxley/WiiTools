@@ -7,8 +7,10 @@ import com.huxley.wiitools.utils.log.WiiLog;
 import com.huxley.wiitools.wiiCrash.WiiCrash;
 import com.huxley.wiitools.wiiCrash.mailreporter.CrashEmailReporter;
 
+import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobConfig;
+
 /**
- *
  * Created by huxley on 2017/4/19.
  */
 public class WiiTools {
@@ -49,6 +51,17 @@ public class WiiTools {
         if (!StringUtils.isEmpty(tag)) {
             WiiLog.TAG_ROOT = tag;
         }
+        return this;
+    }
+
+    public WiiTools initBmob(String applicationID) {
+        BmobConfig config = new BmobConfig.Builder(mContext)
+                .setApplicationId(applicationID) //设置appkey
+                .setConnectTimeout(30)           //请求超时时间（单位为秒）：默认15s
+                .setUploadBlockSize(1024 * 1024) //文件分片上传时每片的大小（单位字节），默认512*1024
+                .setFileExpiration(2500)         //文件的过期时间(单位为秒)：默认1800s
+                .build();
+        Bmob.initialize(config);
         return this;
     }
 }

@@ -38,6 +38,34 @@
                 android:layout_height="wrap_content"
                 android:onClick="testDialog"
                 android:text="@string/test_dialog"/>
+
+            <Button
+                android:id="@+id/btn_select_date_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="testSelectDate"
+                android:text="@string/test_select_date"/>
+
+            <Button
+                android:id="@+id/btn_sopfix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="testSopfix"
+                android:text="@string/test_sopfix"/>
+
+            <Button
+                android:id="@+id/btn_multi_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="testMultiType"
+                android:text="@string/test_multi_type"/>
+
+            <Button
+                android:id="@+id/btn_status_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="testStatusButton"
+                android:text="@string/test_status_button"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

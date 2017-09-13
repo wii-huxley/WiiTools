@@ -4,8 +4,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="test_toast">toast测试</string>
-    <string name="test_handler_bus">handlerBus测试</string>
-    <string name="test_input">input测试</string>
-    <string name="test_dialog">dialog测试</string>
+    <string name="test_toast">Toast测试</string>
+    <string name="test_handler_bus">HandlerBus测试</string>
+    <string name="test_input">Input测试</string>
+    <string name="test_dialog">Dialog测试</string>
+    <string name="test_select_date">SelectDate测试</string>
+    <string name="test_sopfix">Sopfix测试</string>
+    <string name="test_multi_type">MultiType测试</string>
+    <string name="test_status_button">StatusButton测试</string>
 </resources>

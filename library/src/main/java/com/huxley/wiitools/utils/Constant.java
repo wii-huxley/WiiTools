@@ -7,5 +7,6 @@ import java.util.Locale;
  */
 public class Constant {
 
-    public static final Locale LOCALE = Locale.US;
+    public static final Locale LOCALE     = Locale.US;
+    public static final String DATE_FORMAT_1 = "yyyy-MM-dd HH:mm:ss.SSS";
 }
