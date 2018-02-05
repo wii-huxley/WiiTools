@@ -15,8 +15,8 @@ import com.huxley.wiitools.R;
 import com.huxley.wiitools.utils.DateUtils;
 import com.huxley.wiitools.utils.ResUtils;
 import com.huxley.wiitools.utils.StringUtils;
-import com.huxley.wiitools.utils.log.WiiLog;
 
+import com.huxley.wiitools.utils.logger.Logger;
 import java.util.Calendar;
 
 /**
@@ -110,7 +110,8 @@ public class WiiSelectDateView extends LinearLayout {
     }
 
     private void selectDate() {
-        WiiLog.i("selectDate");
+        Logger.i("selectDate");
+
     }
 
     private void addDate() {

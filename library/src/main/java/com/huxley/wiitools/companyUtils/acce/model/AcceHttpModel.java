@@ -8,6 +8,7 @@ import com.huxley.wiitools.companyUtils.acce.model.bean.BusinessBean;
 import com.huxley.wiitools.companyUtils.acce.model.bean.ResultBean;
 import com.huxley.wiitools.companyUtils.acce.model.bean.UrlBean;
 
+import com.huxley.wiitools.companyUtils.yscm.YscmHttpClient;
 import java.util.HashMap;
 
 import rx.Observable;

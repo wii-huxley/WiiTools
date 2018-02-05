@@ -2,7 +2,8 @@ package com.huxley.wiitools.companyUtils.acce;
 
 import com.huxley.wiitools.companyUtils.acce.model.AcceUserModel;
 import com.huxley.wiitools.retrofitUtils.HttpClient;
-import com.huxley.wiitools.retrofitUtils.OkHttpLoggingInterceptor;
+import com.huxley.wiitools.retrofitUtils.HttpLoggingInterceptor;
+import com.huxley.wiitools.retrofitUtils.StethoInterceptor;
 import com.huxley.wiitools.utils.Constant;
 import com.huxley.wiitools.utils.DateUtils;
 import com.huxley.wiitools.utils.Tools;
@@ -25,6 +26,7 @@ public class AcceHttpClient {
         return new HttpClient<>(AcceApi.class).getApi(baseUrl, getOkHttpClient());
     }
 
+
     public OkHttpClient getOkHttpClient() {
         Interceptor addQueryParameterInterceptor = new Interceptor() {
             @Override
@@ -34,29 +36,34 @@ public class AcceHttpClient {
                 Request originalRequest = chain.request();
                 Request request;
                 HttpUrl modifiedUrl = originalRequest.url().newBuilder()
-                        .addQueryParameter("nonce", nonce)
-                        .addQueryParameter("timestamp", timestamp)
-                        .addQueryParameter("editTime", timestamp)
-                        .addQueryParameter("sign", AcceTools.getSign(AcceUserModel.getInstance().getUser().token, timestamp, nonce))
-                        .addQueryParameter("device", Tools.getDeviceName())
-                        .addQueryParameter("ipaddr", Tools.getIpAddress())
-                        .addQueryParameter("mac", Tools.getMacAddress())
-                        .addQueryParameter("realName", AcceUserModel.getInstance().getRealName())
-                        .addQueryParameter("companyId", AcceUserModel.getInstance().getCompanyId())
-                        .addQueryParameter("owerName", AcceUserModel.getInstance().getOwerName())
-                        .addQueryParameter("departmentId", AcceUserModel.getInstance().getDepartmentId())
-                        .addQueryParameter("departmentName", AcceUserModel.getInstance().getDepartmentName())
-                        .addQueryParameter("editUserId", AcceUserModel.getInstance().getAtUserId())
-                        .addQueryParameter("sn", AcceTools.getSerialNumber())
-                        .addQueryParameter("app", Tools.getAppName())
-                        .build();
+                    .addQueryParameter("nonce", nonce)
+                    .addQueryParameter("timestamp", timestamp)
+                    .addQueryParameter("editTime", timestamp)
+                    .addQueryParameter("sign",
+                        AcceTools.getSign(AcceUserModel.getInstance().getUser().token, timestamp,
+                            nonce))
+                    .addQueryParameter("device", Tools.getDeviceName())
+                    .addQueryParameter("ipaddr", Tools.getIpAddress())
+                    .addQueryParameter("mac", Tools.getMacAddress())
+                    .addQueryParameter("realName", AcceUserModel.getInstance().getRealName())
+                    .addQueryParameter("companyId", AcceUserModel.getInstance().getCompanyId())
+                    .addQueryParameter("owerName", AcceUserModel.getInstance().getOwerName())
+                    .addQueryParameter("departmentId",
+                        AcceUserModel.getInstance().getDepartmentId())
+                    .addQueryParameter("departmentName",
+                        AcceUserModel.getInstance().getDepartmentName())
+                    .addQueryParameter("editUserId", AcceUserModel.getInstance().getAtUserId())
+                    .addQueryParameter("sn", AcceTools.getSerialNumber())
+                    .addQueryParameter("app", Tools.getAppName())
+                    .build();
                 request = originalRequest.newBuilder().url(modifiedUrl).build();
                 return chain.proceed(request);
             }
         };
         return new OkHttpClient.Builder()
-                .addInterceptor(addQueryParameterInterceptor)
-                .addInterceptor(new OkHttpLoggingInterceptor())
-                .build();
+            .addInterceptor(addQueryParameterInterceptor)
+            .addInterceptor(new HttpLoggingInterceptor())
+            .addNetworkInterceptor(new StethoInterceptor())
+            .build();
     }
 }

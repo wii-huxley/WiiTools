@@ -126,6 +126,10 @@ public class TestDialogActivity extends AppCompatActivity {
     }
 
     public void showProgress(View view) {
-        mDialogFragment = DialogFragmentHelper.showProgress(getSupportFragmentManager(), "正在加载中");
+        mDialogFragment = DialogFragmentHelper.showProgress(getSupportFragmentManager(), "true", true);
+    }
+
+    public void showProgress1(View view) {
+        mDialogFragment = DialogFragmentHelper.showProgress(getSupportFragmentManager(), "false", false);
     }
 }

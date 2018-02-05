@@ -3,4 +3,19 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="dialog_height">200dp</dimen>
+
+
+    <dimen name="common_navigator_height">45dp</dimen>
+    <dimen name="navigator_margin_top">5dp</dimen>
+    <dimen name="small_navigator_height">5dp</dimen>
+    <dimen name="navigator_margin_top_large">45dp</dimen>
+    <dimen name="large_navigator_height">65dp</dimen>
+
+    <dimen name="message_border_width">2dp</dimen>
+    <dimen name="message_margin_top">6dp</dimen>
+
+    <dimen name="category_icon_size">24dp</dimen>
+    <dimen name="normal_space">12dp</dimen>
+    <dimen name="small_space">6dp</dimen>
+    <dimen name="post_image_height">96dp</dimen>
 </resources>

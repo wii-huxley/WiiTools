@@ -1,0 +1,32 @@
+package com.huxley.wiitools.companyUtils.yscm.model.bean;
+
+import com.google.gson.JsonObject;
+import com.huxley.wiitools.companyUtils.acce.model.AcceUserModel;
+import com.huxley.wiitools.utils.GsonUtils;
+
+/**
+ * Created by huxley on 2017/8/17.
+ */
+
+public class YsmcParamsBean {
+
+    private JsonObject mBusinessObject = new JsonObject();
+
+    public YsmcParamsBean() {
+    }
+
+    public YsmcParamsBean add(String key, Object value) {
+        if (value == null) {
+            mBusinessObject.addProperty(key, "");
+        } else if (value instanceof String) {
+            mBusinessObject.addProperty(key, (String) value);
+        } else {
+            mBusinessObject.addProperty(key, GsonUtils.toJson(value));
+        }
+        return this;
+    }
+
+    public String build() {
+        return mBusinessObject.toString();
+    }
+}

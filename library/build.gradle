@@ -16,22 +16,32 @@ android {
 }
 
 dependencies {
+    // 基础包
     compile "com.android.support:support-v4:${supportLibVersion}"
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.android.support:recyclerview-v7:${supportLibVersion}"
     provided "com.android.support:design:${supportLibVersion}"
-
-    compile("me.drakeet.multitype:multitype:${multitype}", {
+    //多类型列表
+   compile("me.drakeet.multitype:multitype:${multitype}", {
         exclude group: 'com.android.support'
     })
-
+    // 网络请求
+    // RESTful架构
     compile ("com.squareup.retrofit2:retrofit:${retrofit}"){
         exclude group : 'com.squareup.okhttp3'
     }
+    // chrome 调试
+    compile "com.facebook.stetho:stetho:${stetho}"
+    // bmob 第三方服务器
     compile "cn.bmob.android:bmob-sdk:${bmob}"
-
+    compile "com.zhy.base:fileprovider:${fileprovider}"
+    // 权限申请
+    compile "pub.devrel:easypermissions:${easypermissions}"
+    // 图片缓存
+    compile "com.github.bumptech.glide:glide:${glide}"
     compile files('libs/activation.jar')
     compile files('libs/additionnal.jar')
+    // 发送邮件
     compile files('libs/mail.jar')
 }
 
@@ -39,7 +49,7 @@ publish {
     userOrg = 'huangweiyi'      //bintray注册的用户名
     groupId = 'com.huxley'         //compile引用时的第1部分groupId
     artifactId = 'wiitools'     //compile引用时的第2部分项目名
-    publishVersion = '2.8.0'    //compile引用时的第3部分版本号
+    publishVersion = '2.8.3'    //compile引用时的第3部分版本号
     desc = 'This is a android tools'
     website = 'https://github.com/wii-huxley/WiiTools'
 }

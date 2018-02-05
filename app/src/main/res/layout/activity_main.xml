@@ -66,6 +66,20 @@
                 android:layout_height="wrap_content"
                 android:onClick="testStatusButton"
                 android:text="@string/test_status_button"/>
+
+            <Button
+                android:id="@+id/btn_magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="testMagicIndicator"
+                android:text="@string/test_magic_indicator"/>
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="testCamera"
+                android:text="@string/test_camera"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -9,18 +9,15 @@ import android.widget.Button;
 
 import com.huxley.wiitools.handlerBus.HandlerBus;
 import com.huxley.wiitools.handlerBus.IHandler;
-import com.huxley.wiitools.companyUtils.acce.AcceSubscriber;
-import com.huxley.wiitools.companyUtils.acce.AcceTools;
-import com.huxley.wiitools.companyUtils.acce.model.AcceHttpModel;
-import com.huxley.wiitools.companyUtils.acce.model.AcceUserModel;
-import com.huxley.wiitools.utils.log.WiiLog;
-import com.huxley.wiitoolssample.testMultiType.TestMultiTypeActivity;
+import com.huxley.wiitoolssample.sample.bilibili.BilibiliActivity;
+import com.huxley.wiitoolssample.testMagicIndicator.example.ExampleMainActivity;
 
 import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
 
     public Button mBtnTestHandlerBus;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,64 +29,88 @@ public class MainActivity extends AppCompatActivity {
             public void handleMessage(Message msg) {
                 switch (msg.what) {
                     case 1:
-                        mBtnTestHandlerBus.setText(MessageFormat.format("{0}{1}", msg.obj, msg.what));
+                        mBtnTestHandlerBus.setText(
+                            MessageFormat.format("{0}{1}", msg.obj, msg.what));
                         break;
                     case 2:
-                        mBtnTestHandlerBus.setText(MessageFormat.format("{0}{1}", msg.obj, msg.what));
+                        mBtnTestHandlerBus.setText(
+                            MessageFormat.format("{0}{1}", msg.obj, msg.what));
                         break;
                 }
             }
         });
 
-        AcceUserModel.getInstance().setAtUserId("15565502588");
-        AcceHttpModel.getInstance()
-                .setUrl(App.Url.API_AUTO)
-                .setServiceCode(App.ServiceCode.LOGIN)
-                .addBusiness("phoneNum", "15565502588")
-                .addBusiness("pwd", AcceTools.getEnPassword("654321"))
-                .post(new AcceSubscriber<String>() {
-                    @Override
-                    public void onSuccess(String userBean) {
-                        WiiLog.i("1111");
-                        WiiLog.json(userBean);
-                    }
-                    @Override
-                    public void onError(String msg) {
-                        WiiLog.i("2222");
-                        WiiLog.i(msg);
-                    }
-                });
+        // AcceUserModel.getInstance().setAtUserId("15565502588");
+        // AcceHttpModel.getInstance()
+        //     .setUrl(App.Url.API_AUTO)
+        //     .setServiceCode(App.ServiceCode.LOGIN)
+        //     .addBusiness("phoneNum", "15565502588")
+        //     .addBusiness("pwd", AcceTools.getEnPassword("654321"))
+        //     .post(new AcceSubscriber<String>() {
+        //         @Override
+        //         public void onSuccess(String userBean) {
+        //             WiiLog.i("1111");
+        //             WiiLog.json(userBean);
+        //         }
+        //
+        //
+        //         @Override
+        //         public void onError(String msg) {
+        //             WiiLog.i("2222");
+        //             WiiLog.i(msg);
+        //         }
+        //     });
     }
+
 
     public void testToast(View view) {
         startActivity(new Intent(this, TestToastActivity.class));
     }
 
+
     public void testHandlerBus(final View view) {
         startActivity(new Intent(this, TestHandlerBusActivity.class));
     }
+
 
     public void testInput(View view) {
         startActivity(new Intent(this, TestInputActivity.class));
     }
 
+
     public void testDialog(View view) {
         startActivity(new Intent(this, TestDialogActivity.class));
     }
+
 
     public void testSelectDate(View view) {
         startActivity(new Intent(this, TestSelectDateActivity.class));
     }
 
+
     public void testSopfix(View view) {
         startActivity(new Intent(this, TestSopfixActivity.class));
     }
 
+
     public void testMultiType(View view) {
-        startActivity(new Intent(this, TestMultiTypeActivity.class));
+        startActivity(new Intent(this, BilibiliActivity.class));
     }
+
 
     public void testStatusButton(View view) {
         startActivity(new Intent(this, TestButtonActivity.class));
     }
+
+
+    public void testMagicIndicator(View view) {
+        startActivity(new Intent(this, ExampleMainActivity.class));
+    }
+
+
+    public void testCamera(View view) {
+        startActivity(new Intent(this, TestCameraActivity.class));
+    }
+
+
 }

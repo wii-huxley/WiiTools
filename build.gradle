@@ -41,8 +41,10 @@ ext{
 
     lombok = '1.12.6'
     retrofit = '2.2.0'
-    converterGson = '2.2.0'
-    adapterRxjava = '2.2.0'
     multitype = '3.1.0'
     bmob = '3.5.5'
+    stetho = '1.5.0'
+    fileprovider = '1.0.0'
+    easypermissions = '1.0.1'
+    glide = '3.7.0'
 }

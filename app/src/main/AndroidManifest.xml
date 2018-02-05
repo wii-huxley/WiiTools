@@ -8,6 +8,11 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 外部存储读权限，调试工具加载本地补丁需要 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 用于写入缓存数据到扩展存储卡 -->
 
     <application
         android:name=".App"
@@ -17,6 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -30,8 +36,27 @@
         <activity android:name=".TestDialogActivity"/>
         <activity android:name=".TestSelectDateActivity"/>
         <activity android:name=".TestSopfixActivity"/>
-        <activity android:name=".testMultiType.TestMultiTypeActivity"/>
         <activity android:name=".TestButtonActivity"/>
+        <activity android:name=".testMagicIndicator.example.ExampleMainActivity"/>
+        <activity android:name=".testMagicIndicator.example.ScrollableTabExampleActivity" />
+        <activity android:name=".testMagicIndicator.example.FixedTabExampleActivity"/>
+        <activity android:name=".testMagicIndicator.example.DynamicTabExampleActivity"/>
+        <activity android:name=".testMagicIndicator.example.NoTabOnlyIndicatorExampleActivity"/>
+        <activity android:name=".testMagicIndicator.example.FragmentContainerExampleActivity"/>
+        <activity android:name=".testMagicIndicator.example.BadgeTabExampleActivity"/>
+        <activity android:name=".testMagicIndicator.example.CustomNavigatorExampleActivity"/>
+        <activity android:name=".testMagicIndicator.example.LoadCustomLayoutExampleActivity"/>
+
+        <activity android:name=".sample.bilibili.BilibiliActivity"/>
+        <activity android:name=".sample.multi_select.MultiSelectActivity"/>
+        <activity android:name=".sample.normal.NormalActivity"/>
+        <activity android:name=".sample.weibo.WeiboActivity"/>
+        <activity android:name=".sample.communicate_with_binder.SimpleActivity"/>
+        <activity android:name=".sample.one2many.OneDataToManyActivity"/>
+        <activity android:name=".sample.payload.TestPayloadActivity"/>
+        <activity android:name=".sample.extra_apis.SeldomUsedApisPlayground"/>
+
+        <activity android:name=".TestCameraActivity"/>
     </application>
 
 </manifest>

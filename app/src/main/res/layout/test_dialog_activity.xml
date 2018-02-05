@@ -58,6 +58,11 @@
                 android:layout_height="wrap_content"
                 android:onClick="showProgress"
                 android:text="showProgress"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showProgress1"
+                android:text="showProgress1"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
